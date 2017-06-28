@@ -1,0 +1,6 @@
+https://docs.microsoft.com/en-us/aspnet/mvc/overview/security/create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset#hook-up-sendgrid
+
+https://bootsnipp.com/snippets/featured/advance-password-validation
+
+https://blogs.msdn.microsoft.com/webdev/2013/10/16/customizing-profile-information-in-asp-net-identity-in-vs-2013-templates/
+
