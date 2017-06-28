@@ -75,7 +75,20 @@ namespace ProjectExam.Controllers
 
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
-            var result = await SignInManager.PasswordSignInAsync(model.UserName, model.Password, model.RememberMe, shouldLockout: false);
+            //var result = await SignInManager.PasswordSignInAsync(model.UserName, model.Password, model.RememberMe, shouldLockout: false);
+
+            // Checking username or email in textbox input
+            var userName = model.UserName;
+            using (var context = new ApplicationDbContext())
+            {
+                var user = context.Users.FirstOrDefault(p => p.Email == model.UserName);
+                if (user != null)
+                {
+                    userName = user.UserName;
+                }
+            }
+            var result = await SignInManager.PasswordSignInAsync(userName, model.Password, model.RememberMe, shouldLockout: true);
+
             switch (result)
             {
                 case SignInStatus.Success:

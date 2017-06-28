@@ -54,7 +54,7 @@ namespace ProjectExam.Models
         //public string Email { get; set; }
 
         [Required]
-        [Display(Name = "User Name")]
+        [Display(Name = "UserName or Email")]
         public string UserName { get; set; }
 
         [Required]
@@ -75,6 +75,7 @@ namespace ProjectExam.Models
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
+        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
         [Required]
