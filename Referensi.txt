@@ -1,6 +1,11 @@
 https://docs.microsoft.com/en-us/aspnet/mvc/overview/security/create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset#hook-up-sendgrid
 
-https://bootsnipp.com/snippets/featured/advance-password-validation
+(worked) https://bootsnipp.com/snippets/featured/advance-password-validation
 
-https://blogs.msdn.microsoft.com/webdev/2013/10/16/customizing-profile-information-in-asp-net-identity-in-vs-2013-templates/
+(user login not workded) https://blogs.msdn.microsoft.com/webdev/2013/10/16/customizing-profile-information-in-asp-net-identity-in-vs-2013-templates/
 
+http://marcinjuraszek.com/2014/03/asp-net-identity-2-0-0-username-and-email-separation.html
+
+(not worked) http://www.c-sharpcorner.com/UploadFile/asmabegam/Asp-Net-mvc-5-security-and-creating-user-role/
+
+(worked) http://openlightgroup.com/Blog/TabId/58/PostId/189/UserRolesAdministration.aspx
