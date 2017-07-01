@@ -26,5 +26,11 @@ namespace ProjectExam.Controllers
 
             return View();
         }
+
+        public ActionResult Quiz()
+        {
+            ViewBag.Message = "My quiz page";
+            return View();
+        }
     }
 }
