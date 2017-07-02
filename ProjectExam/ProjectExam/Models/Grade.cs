@@ -7,7 +7,7 @@ namespace ProjectExam.Models
 {
     public class Grade
     {
-        public double TotalPoints { get; set; }
+        public string UserName { get; set; }
         public double Score { get; set; }
         public Quiz quiz { get; set; }
     }

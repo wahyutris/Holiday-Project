@@ -10,13 +10,6 @@ namespace ProjectExam.Models
         public int Id { get; set; }
         public string Text { get; set; }
         public bool IsAnswer { get; set; }
-        private Question _question = new Question();
-        public bool IsSelected { get; set; }
-
-        public Question Question
-        {
-            get { return _question; }
-            set { _question = value; }
-        }
+        public bool IsSelected { get; set; }        
     }
 }

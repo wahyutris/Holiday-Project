@@ -1,0 +1,19 @@
+﻿@model ProjectExam.Models.Question
+
+@{
+    ViewBag.Title = "CustomTest";
+}
+
+<h2>CustomTest</h2>
+
+<h4>Question @Model.Id (@Model.Point poin) : @Model.Text? </h4>
+
+@using (Html.BeginForm())
+{
+    foreach (var choice in Model.Choices)
+    {
+        @Html.RadioButton("answer", choice.Text) @choice.Text <br />
+    }
+    <br /><br />
+    <input type="submit" class="btn btn-info" value="Submit Answer" onclick="location.href='@Url.Action("StartQuiz", "Quiz")'" />
+}

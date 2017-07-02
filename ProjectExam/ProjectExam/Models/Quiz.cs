@@ -8,9 +8,9 @@ namespace ProjectExam.Models
     public class Quiz
     {
         public int Id { get; set; }
-        private IList<Question> _questions = new List<Question>();
         public string Name { get; set; }
 
+        private IList<Question> _questions = new List<Question>();
         public IList<Question> Questions
         {
             get { return _questions; }
@@ -28,14 +28,6 @@ namespace ProjectExam.Models
         public void AddQuestion(Question question)
         {
             _questions.Add(question);
-        }
-
-        public double TotalPoints
-        {
-            get
-            {
-                return (from q in _questions select q.Point).Sum();
-            }
-        }
+        }       
     }
 }

@@ -11,7 +11,7 @@ namespace ProjectExam.Controllers
     public class QuizController : Controller
     {
         private QuizRepository _quizRepo;
-
+        // Constructor
         public QuizController()
         {
             _quizRepo = new QuizRepository();
@@ -56,5 +56,22 @@ namespace ProjectExam.Controllers
         {
             return View();
         }
+
+
+        // ======================== BUAT SENDIRI =======================
+        private QuestionRepository _questionRepo = new QuestionRepository();
+        private static Random random = new Random();
+
+        public ActionResult StartQuiz()
+        {
+            int count = _questionRepo.totalQuestion();
+
+            //choose a random question from questionlist
+            int choose = random.Next(1, count+1);
+            Question randomquestion = new Question();
+            randomquestion = _questionRepo.getQuestion(choose);
+
+            return View(randomquestion);
+        }        
     }
 }
