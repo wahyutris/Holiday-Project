@@ -1,0 +1,74 @@
+﻿@model ProjectExam.Models.Question
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Question</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.GroupingId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GroupingId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuestionDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuestionDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MultipleChoiceCorrect)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MultipleChoiceCorrect)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MultipleChoiceB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MultipleChoiceB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MultipleChoiceC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MultipleChoiceC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MultipleChoiceD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MultipleChoiceD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Answerexplanation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Answerexplanation)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

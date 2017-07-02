@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "AddAnotherQuestion";
+}
+
+<div align="center">
+    <h3>AddAnotherQuestion?</h3>
+    <br /><br />
+    @using (Html.BeginForm("AddNewQuestion", "Exams"))
+    {
+        <input type="hidden" name="id" value=@ViewBag.id>
+        <input type="submit" value="                    Yes                    " />
+    }
+    <br />
+    @using (Html.BeginForm("Index", "Questions"))
+    {
+        <input type="submit" value="                    No                    " />
+    }
+
+</div>
+

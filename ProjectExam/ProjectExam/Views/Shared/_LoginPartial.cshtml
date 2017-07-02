@@ -2,7 +2,7 @@
 @if (Request.IsAuthenticated)
 {
     <ul class="nav navbar-nav">
-        <li>@Html.ActionLink("Quiz", "Publish", "Quiz")</li>
+        <li>@Html.ActionLink("Exam", "Index", "Exams")</li>
     </ul>
 
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
