@@ -170,7 +170,7 @@ namespace ProjectExam.Controllers
 
             return RedirectToAction("Details/" + id, "Exams");
         }
-
+        
         public ActionResult StartExamPreFormatting(int? searchid)
         {
             /*steps
@@ -209,7 +209,7 @@ namespace ProjectExam.Controllers
             int questioncount = 1;
             TempData["questionscorrect"] = questionscorrect;
             TempData["questionswrong"] = questionswrong;
-            TempData["questioncount"] = questioncount;
+            TempData["questioncount"] = questioncount;            
 
             return RedirectToAction("RandomTest", "BeginExam");
         }

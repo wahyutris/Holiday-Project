@@ -192,20 +192,26 @@
     <Compile Include="Controllers\BeginExamController.cs" />
     <Compile Include="Controllers\ExamsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LeaderBoardsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\QuestionsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201706280610243_InitialCreate.cs" />
-    <Compile Include="Migrations\201706280610243_InitialCreate.Designer.cs">
-      <DependentUpon>201706280610243_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201707021642021_InitialCreate.cs" />
+    <Compile Include="Migrations\201707021642021_InitialCreate.Designer.cs">
+      <DependentUpon>201707021642021_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707030037252_AddID.cs" />
+    <Compile Include="Migrations\201707030037252_AddID.Designer.cs">
+      <DependentUpon>201707030037252_AddID.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Exam.cs" />
     <Compile Include="Models\Globals.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\LeaderBoards.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Question.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -291,10 +297,11 @@
     <Content Include="Views\BeginExam\RandomTest.cshtml" />
     <Content Include="Views\BeginExam\ExamFinalResults.cshtml" />
     <Content Include="Views\BeginExam\errorpage.cshtml" />
+    <Content Include="Views\LeaderBoards\Index.cshtml" />
+    <Content Include="Views\LeaderBoards\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -312,8 +319,11 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706280610243_InitialCreate.resx">
-      <DependentUpon>201706280610243_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201707021642021_InitialCreate.resx">
+      <DependentUpon>201707021642021_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707030037252_AddID.resx">
+      <DependentUpon>201707030037252_AddID.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -23,7 +23,10 @@ else
 @ViewBag.percentright %</pre>
 <br />
 
-@Html.ActionLink("Return to Quizbank", "Index", "Exams")
+@Html.ActionLink("Return to Quizbank", "Index", "Exams") | @Html.ActionLink("Submit to LeaderBoards", "Create", "LeaderBoards")
+@*<a href="@Url.Action("Create", "LeaderBoards", new { ViewBag.amountcorrect })" class="btn btn-success margin-right">
+    <span class="glyphicon glyphicon-user"></span><span class="hidden-xs"> See LeaderBoards</span>
+</a>*@
 
 <br /> <br />
 @if (Model != null)

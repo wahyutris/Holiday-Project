@@ -5,15 +5,15 @@ namespace ProjectExam.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<ProjectExam.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<ProjectExam.Models.LeaderBoardsDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "ProjectExam.Models.ApplicationDbContext";
+            ContextKey = "ProjectExam.Models.LeaderBoardsDbContext";
         }
 
-        protected override void Seed(ProjectExam.Models.ApplicationDbContext context)
+        protected override void Seed(ProjectExam.Models.LeaderBoardsDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

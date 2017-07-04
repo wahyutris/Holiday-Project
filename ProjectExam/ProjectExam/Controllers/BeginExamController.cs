@@ -114,6 +114,9 @@ namespace ProjectExam.Controllers
             reviewlist.Add(randomquestion);
             TempData["reviewlist"] = reviewlist;
 
+            //send to randomtest.cshtml
+            ViewBag.ExamTitle = TempData["examtitle"];
+
             return View(randomquestion);
         }
 
@@ -199,10 +202,13 @@ namespace ProjectExam.Controllers
             //update scores leaderboard
             if (TempData["questionscorrect"] != null)
             {
+                var tempQuestionCorrect = (double)TempData["questionscorrect"];
+                TempData["questionscorrect"] = tempQuestionCorrect;
                 ViewBag.amountcorrect = (double)TempData["questionscorrect"];
                 ViewBag.amountwrong = (double)TempData["questionswrong"];
-            }
 
+                TempData["totalCorrect"] = (int)tempQuestionCorrect;
+            }
             //remove tempdata artifacts. One is created for count at the end of each test.
             //may not be necessary since it is reset in pretestformatting. But just to make sure, it is
             //also removed here. Temdpdata is erased once called.

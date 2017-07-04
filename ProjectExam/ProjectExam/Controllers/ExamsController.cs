@@ -46,7 +46,7 @@ namespace ProjectExam.Controllers
                 db.ExamDataBase.Add(exam);
                 db.SaveChanges();
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Manage");
             }
 
             return View(exam);            
@@ -95,13 +95,13 @@ namespace ProjectExam.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Name,Description,Status,Genre,DateModified,GroupingId,TimesTaken,Owner,Upvotes,IsAdvanced,TestFinishedDefaultMessage,MessagesArrayAsSingleString,AmountCorrectArrayAsSingleString,AdditionalConditionsArrayAsSingleString")] Exam exam)
+        public ActionResult Edit([Bind(Include = "ID,Name,Description,Status,Genre,DateModified,TimesTaken,Owner")] Exam exam)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(exam).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Manage");
             }
             return View(exam);
         }
@@ -129,7 +129,7 @@ namespace ProjectExam.Controllers
             Exam exam = db.ExamDataBase.Find(id);
             db.ExamDataBase.Remove(exam);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Manage");
         }
 
         protected override void Dispose(bool disposing)
@@ -145,6 +145,6 @@ namespace ProjectExam.Controllers
         {
             ViewBag.ID = id;
             return View();
-        }
+        }        
     }
 }
